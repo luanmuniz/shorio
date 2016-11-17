@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+set -e
+
+tmp="$(mktemp -t "$(basename "$0").XXXXXXXXXX")"
+
+log="$(git --no-pager log --no-merges --pretty="format: * %s (%an)" $PREVIOUS_VERSION..)"
+
+printf "
+$VERSION / $(date +"%Y-%m-%d")
+==================
+
+$log
+" >"$tmp"
+
+cat CHANGELOG.md >>"$tmp"
+mv "$tmp" CHANGELOG.md
+git add CHANGELOG.md

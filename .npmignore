@@ -1,0 +1,11 @@
+coverage
+test
+.coveralls.yml
+.editorconfig
+.eslintrc
+.gitignore
+.travis.yml
+CHANGELOG.md
+CONTRIBUTING.md
+README.md
+*.log
