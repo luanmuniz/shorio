@@ -2,6 +2,7 @@
 
 const Parser = require('./lib/parser');
 const cssSelect = require('css-select');
+const Helper = require('./lib/helper');
 const Attributes = require('./lib/api/attributes');
 const Clone = require('./lib/api/clone');
 const DomMethods = require('./lib/api/dom-methods');
@@ -34,6 +35,7 @@ var Shorio = {
 				DOM,
 				selector
 			},
+			Helper,
 			Attributes,
 			Clone,
 			DomMethods,
