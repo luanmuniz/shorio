@@ -24,7 +24,7 @@ var Shorio = {
 	},
 
 	select(cssQuery) {
-		var domSelected = cssSelect(cssQuery, Shorio.DOM.children);
+		let domSelected = cssSelect(cssQuery, Shorio.DOM.children);
 
 		return Shorio.getAllMethods(Shorio.DOM, domSelected);
 	},
